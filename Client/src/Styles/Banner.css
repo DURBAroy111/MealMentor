@@ -1,0 +1,46 @@
+.banner {
+  background-image: url("../assets/bg.jpg"); /* Replace with your own banner image */
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.banner::before {
+  content: ""; /* Required for the pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Inherit background from the parent (image) */
+  filter: blur(10px); /* Adjust blur intensity */
+  z-index: -1; /* Make sure the blur is behind the content */
+}
+
+.banner-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.get-started-btn {
+  padding: 15px 30px;
+  background-color: #ff7f50;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.get-started-btn:hover {
+  background-color: #ff5722;
+}
